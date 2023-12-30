@@ -41,10 +41,10 @@ function init(){
     map.locate({setView:true, maxZoom: 25, enableHighAccuray: true});
     function onLocationFound(e){
         console.log(e)
-        var radius = e.accuracy.toFixed(2);
+       // var radius = e.accuracy;
 
         var myPosition = L.marker(e.latlng).addTo(map)
-            .bindPopup('Your position at <b>' + radius + "</b> m of accuracy");
+            .bindPopup("Your position");
     };
 
     map.on('locationfound', onLocationFound);
